@@ -1,0 +1,52 @@
+# Netflix
+HOST-SUFFIX,netflix.com,PROXY
+HOST-SUFFIX,netflix.net,PROXY
+HOST-SUFFIX,nflxext.com,PROXY
+HOST-SUFFIX,nflximg.com,PROXY
+HOST-SUFFIX,nflximg.net,PROXY
+HOST-SUFFIX,nflxso.net,PROXY
+HOST-SUFFIX,nflxvideo.net,PROXY
+
+# YouTube
+USER-AGENT,*youtube*,PROXY
+USER-AGENT,YouTube*,PROXY
+HOST-KEYWORD,youtube,PROXY
+HOST-SUFFIX,googlevideo.com,PROXY
+HOST-SUFFIX,gvt2.com,PROXY
+HOST-SUFFIX,youtu.be,PROXY
+
+# Amazon Prime Video
+USER-AGENT,InstantVideo.US*,PROXY
+USER-AGENT,Prime%20Video*,PROXY
+HOST-SUFFIX,aiv-cdn.net,PROXY
+HOST-SUFFIX,amazonaws.com,PROXY
+HOST-SUFFIX,amazonvideo.com,PROXY
+HOST-SUFFIX,llnwd.net,PROXY
+
+# Vimeo
+HOST-SUFFIX,vimeo.com,PROXY
+HOST-SUFFIX,vimeocdn.com,PROXY
+
+# Disney Plus
+USER-AGENT,Disney*,PROXY
+HOST,cdn.registerdisney.go.com,PROXY
+HOST-SUFFIX,disneyplus.com,PROXY
+HOST-SUFFIX,disney-plus.net,PROXY
+HOST-SUFFIX,dssott.com,PROXY
+HOST-SUFFIX,bamgrid.com,PROXY
+HOST-SUFFIX,execute-api.us-east-1.amazonaws.com,PROXY
+
+# HBO && HBO Go
+USER-AGENT,HBO%20NOW*,PROXY
+HOST-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,PROXY
+HOST-SUFFIX,hbo.com,PROXY
+HOST-SUFFIX,hboasia.com,PROXY
+HOST-SUFFIX,hbogo.com,PROXY
+HOST-SUFFIX,hbogoasia.hk,PROXY
+
+# Hulu
+USER-AGENT,Hulu*,PROXY
+HOST-SUFFIX,happyon.jp,PROXY
+HOST-SUFFIX,hulu.com,PROXY
+HOST-SUFFIX,huluim.com,PROXY
+HOST-SUFFIX,hulustream.com,PROXY
