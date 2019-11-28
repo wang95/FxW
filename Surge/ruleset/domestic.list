@@ -14,15 +14,18 @@ DOMAIN-KEYWORD,alipay
 DOMAIN-KEYWORD,taobao
 DOMAIN-KEYWORD,alicdn
 DOMAIN-KEYWORD,aliyun
+DOMAIN-KEYWORD,alibaba
+DOMAIN-KEYWORD,weibo
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,jd.com
+DOMAIN-SUFFIX,qcloud.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,xiami.com
 DOMAIN-SUFFIX,xiami.net
-DOMAIN-SUFFIX,weibo.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,sina.com
 DOMAIN-SUFFIX,douban.com
+DOMAIN-SUFFIX,yinxiang.com
 DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,163.com
 DOMAIN-SUFFIX,126.net
@@ -31,6 +34,7 @@ DOMAIN-SUFFIX,sohu.com
 DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,gtimg.com // Tencent img server
 DOMAIN-SUFFIX,mi.com
+DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,sspai.com
 DOMAIN-SUFFIX,tudou.com
 DOMAIN-SUFFIX,youku.com
@@ -43,6 +47,16 @@ DOMAIN-SUFFIX,zimuzu.tv
 DOMAIN-SUFFIX,zmzfile.com
 DOMAIN-SUFFIX,zmzapi.net
 DOMAIN-SUFFIX,zmz2019.com
+DOMAIN-SUFFIX,dingtalk.com
+DOMAIN-SUFFIX,bdimg.com
+DOMAIN-SUFFIX,bcebos.com
+DOMAIN-SUFFIX,amap.com
+DOMAIN-SUFFIX,autonavi.com
+DOMAIN-SUFFIX,ele.me
+
+# China Banks
+DOMAIN-KEYWORD,cmbchina
+DOMAIN-KEYWORD,bankcomm
 
 # China Media
 
