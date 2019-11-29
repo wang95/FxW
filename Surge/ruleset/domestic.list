@@ -1,3 +1,6 @@
+# Personal
+DOMAIN-SUFFIX,brianre.com
+
 # China Apps
 USER-AGENT,MicroMessenger*
 USER-AGENT,MobileAsset*
@@ -8,59 +11,128 @@ USER-AGENT,PayPal*
 USER-AGENT,TIM*
 
 # China
-DOMAIN-SUFFIX,cn
+# > Baidu
 DOMAIN-KEYWORD,baidu
+DOMAIN-SUFFIX,bdstatic.com
+DOMAIN-SUFFIX,yunjiasu-cdn.net
+DOMAIN-SUFFIX,bdimg.com
+DOMAIN-SUFFIX,bcebos.com
+
+# > Alibaba
 DOMAIN-KEYWORD,alipay
-DOMAIN-KEYWORD,taobao
 DOMAIN-KEYWORD,alicdn
 DOMAIN-KEYWORD,aliyun
 DOMAIN-KEYWORD,alibaba
-DOMAIN-KEYWORD,weibo
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,qcloud.com
-DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,xiami.com
-DOMAIN-SUFFIX,xiami.net
-DOMAIN-SUFFIX,zhihu.com
-DOMAIN-SUFFIX,sina.com
-DOMAIN-SUFFIX,douban.com
-DOMAIN-SUFFIX,yinxiang.com
-DOMAIN-SUFFIX,netease.com
-DOMAIN-SUFFIX,163.com
-DOMAIN-SUFFIX,126.net
-DOMAIN-SUFFIX,sogou.com
-DOMAIN-SUFFIX,sohu.com
-DOMAIN-SUFFIX,soso.com
-DOMAIN-SUFFIX,gtimg.com // Tencent img server
-DOMAIN-SUFFIX,mi.com
-DOMAIN-SUFFIX,mi-img.com
-DOMAIN-SUFFIX,sspai.com
-DOMAIN-SUFFIX,tudou.com
-DOMAIN-SUFFIX,youku.com
-DOMAIN-SUFFIX,xunlei.com
-DOMAIN-SUFFIX,iqiyi.com
-DOMAIN-SUFFIX,cnbeta.com
-DOMAIN-SUFFIX,ifeng.com
-DOMAIN-SUFFIX,zmzapi.com
-DOMAIN-SUFFIX,zimuzu.tv
-DOMAIN-SUFFIX,zmzfile.com
-DOMAIN-SUFFIX,zmzapi.net
-DOMAIN-SUFFIX,zmz2019.com
-DOMAIN-SUFFIX,dingtalk.com
-DOMAIN-SUFFIX,bdimg.com
-DOMAIN-SUFFIX,bcebos.com
+DOMAIN-KEYWORD,taobao
+DOMAIN-SUFFIX,alikunlun.com
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,autonavi.com
+DOMAIN-SUFFIX,dingtalk.com
+DOMAIN-SUFFIX,mxhichina.com
+DOMAIN-SUFFIX,tmall.com
+DOMAIN-SUFFIX,tmall.hk
+
+# > Tencent
+DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,idqqimg.com
+DOMAIN-SUFFIX,igamecj.com
+DOMAIN-SUFFIX,myapp.com
+DOMAIN-SUFFIX,myqcloud.com
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,qcloud.com
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,tencent-cloud.net
+
+# > JD
+DOMAIN-SUFFIX,jd.com
+DOMAIN-SUFFIX,jd.hk
+DOMAIN-SUFFIX,jdpay.com
+DOMAIN-SUFFIX,360buy.com
+DOMAIN-SUFFIX,360buyimg.com
+
+# > Sina
+DOMAIN-SUFFIX,sina.com
+DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,weibocdn.com
+DOMAIN-SUFFIX,miaopai.com
+
+# > NetEase
+DOMAIN-SUFFIX,163.com
+DOMAIN-SUFFIX,126.net
+DOMAIN-SUFFIX,127.net
+DOMAIN-SUFFIX,163yun.com
+DOMAIN-SUFFIX,lofter.com
+DOMAIN-SUFFIX,netease.com
+DOMAIN-SUFFIX,ydstatic.com
+
+# > Sohu
+DOMAIN-SUFFIX,sohu.com
+DOMAIN-SUFFIX,sohucs.com
+DOMAIN-SUFFIX,sohu-inc.com
+DOMAIN-SUFFIX,v-56.com
+
+# > Sogo
+DOMAIN-SUFFIX,sogo.com
+DOMAIN-SUFFIX,sogou.com
+DOMAIN-SUFFIX,sogoucdn.com
+DOMAIN-SUFFIX,soso.com
+
+# > Xiaomi
+DOMAIN-SUFFIX,duokan.com
+DOMAIN-SUFFIX,mi.com
+DOMAIN-SUFFIX,mi-img.com
+DOMAIN-SUFFIX,miui.com
+DOMAIN-SUFFIX,miwifi.com
+DOMAIN-SUFFIX,xiaomi.com
+
+# > YYeTs
+USER-AGENT,YYeTs*
+DOMAIN-SUFFIX,jstucdn.com
+DOMAIN-SUFFIX,zimuzu.io
+DOMAIN-SUFFIX,zimuzu.tv
+DOMAIN-SUFFIX,zmz2019.com
+DOMAIN-SUFFIX,zmzapi.com
+DOMAIN-SUFFIX,zmzapi.net
+DOMAIN-SUFFIX,zmzfile.com
+
+# > Other China Sites
+DOMAIN-SUFFIX,cn
+DOMAIN-SUFFIX,zhihu.com
+DOMAIN-SUFFIX,zhimg.com
+DOMAIN-SUFFIX,douban.com
+DOMAIN-SUFFIX,doubanio.com
+DOMAIN-SUFFIX,yinxiang.com
+DOMAIN-SUFFIX,sspai.com
+DOMAIN-SUFFIX,weidian.com
+DOMAIN-SUFFIX,xiachufang.com
+DOMAIN-SUFFIX,ximalaya.com
+DOMAIN-SUFFIX,xmcdn.com
+DOMAIN-SUFFIX,xunlei.com
+DOMAIN-SUFFIX,cnbeta.com
+DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,ele.me
+DOMAIN-SUFFIX,smzdm.com
 
 # China Banks
-DOMAIN-KEYWORD,cmbchina
-DOMAIN-KEYWORD,bankcomm
+# > China Merchants Bank
+DOMAIN-SUFFIX,cmbchina.com
+DOMAIN-SUFFIX,cmbimg
+DOMAIN-SUFFIX,mbcloud.com
+
+# > Bank of Communications
+DOMAIN-SUFFIX,bankcomm.com
+
+# > China Construction Bank
+DOMAIN-SUFFIX,ccb.com
+
+# > Agricultural Bank of China
+DOMAIN-SUFFIX,abchina.com
+
+# > Post Savings Bank of China
+DOMAIN-SUFFIX,psbc.com
 
 # China Media
-
-# Bilibili
+# > Bilibili
 USER-AGENT,*bili*
 DOMAIN-SUFFIX,acg.tv
 DOMAIN-SUFFIX,acgvideo.com
@@ -73,20 +145,55 @@ DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,im9.com
 
-# IQIYI
+# > AcFun
+DOMAIN-SUFFIX,acfun.cn
+DOMAIN-SUFFIX,acfun.com
+DOMAIN-SUFFIX,acfun.tv
+DOMAIN-SUFFIX,aixifan.com
+
+# > IQIYI
 USER-AGENT,QIYI*
 USER-AGENT,iQiYi*
 DOMAIN-KEYWORD,qiyi
+DOMAIN-SUFFIX,iqiyi.com
 DOMAIN-SUFFIX,qy.net
 IP-CIDR,101.227.0.0/16,no-resolve
 IP-CIDR,101.224.0.0/13,no-resolve
 IP-CIDR,119.176.0.0/12,no-resolve
 
-# NeteaseMusic
+# > Youku
+USER-AGENT,Youku*
+DOMAIN-SUFFIX,soku.com
+DOMAIN-SUFFIX,youku.com
+DOMAIN-SUFFIX,ykimg.com
+DOMAIN-SUFFIX,tudou.com
+
+# > Xiami Music
+USER-AGENT,xiami*
+DOMAIN-SUFFIX,xiami.com
+DOMAIN-SUFFIX,xiami.net
+
+# > Netease Music
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
 USER-AGENT,NeteaseMusic*
 DOMAIN-SUFFIX,music.126.net
 DOMAIN-SUFFIX,music.163.com
 
-# Personal
-DOMAIN-SUFFIX,brianre.com
+# > Hunan TV
+DOMAIN-SUFFIX,hitv.com
+DOMAIN-SUFFIX,mgtv.com
+
+# Global Sites Direct
+# > Microsoft
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,msecnd.net
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,s-microsoft.com
+DOMAIN-SUFFIX,visualstudio.com
+DOMAIN-SUFFIX,windows.com
+DOMAIN-SUFFIX,windowsupdate.com
+
+# > Other Global Sites
+DOMAIN-SUFFIX,plex.driect
+DOMAIN-SUFFIX,plex.tv
