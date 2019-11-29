@@ -1,4 +1,50 @@
-# Netflix
+# Video
+# > Amazon Prime Video
+USER-AGENT,InstantVideo.US*
+USER-AGENT,Prime%20Video*
+DOMAIN-SUFFIX,aiv-cdn.net
+DOMAIN-SUFFIX,aiv-delivery.net
+DOMAIN-SUFFIX,amazonvideo.com
+DOMAIN-SUFFIX,media-amazon.com
+DOMAIN-SUFFIX,primevideo.com
+
+# > Disney+
+USER-AGENT,Disney+*
+DOMAIN-SUFFIX,bamgrid.com
+DOMAIN-SUFFIX,disney-plus.net
+DOMAIN-SUFFIX,disneyplus.com
+DOMAIN-SUFFIX,dssott.com
+DOMAIN,cdn.registerdisney.go.com
+
+# > HBO NOW
+USER-AGENT,HBO%20NOW*
+DOMAIN-SUFFIX,hbo.com
+DOMAIN-SUFFIX,hbogo.com
+DOMAIN-SUFFIX,hbonow.com
+
+# > HBO GO HKG
+USER-AGENT,HBO%20GO%20PROD%20HKG*
+DOMAIN-SUFFIX,hbogoasia.com
+DOMAIN-SUFFIX,hbogoasia.hk
+DOMAIN,bcbolthboa-a.akamaihd.net
+DOMAIN,players.brightcove.net
+DOMAIN,s3-ap-southeast-1.amazonaws.com
+DOMAIN,dai3fd1oh325y.cloudfront.net
+DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
+DOMAIN,hboasia1-i.akamaihd.net
+DOMAIN,hboasia2-i.akamaihd.net
+DOMAIN,hboasia3-i.akamaihd.net
+DOMAIN,hboasia4-i.akamaihd.net
+DOMAIN,hboasia5-i.akamaihd.net
+DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net
+
+# > Hulu
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,huluim.com
+DOMAIN-SUFFIX,hulustream.com
+
+# > Netflix
+USER-AGENT,Argo*
 DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,netflix.net
 DOMAIN-SUFFIX,nflxext.com
@@ -6,47 +52,55 @@ DOMAIN-SUFFIX,nflximg.com
 DOMAIN-SUFFIX,nflximg.net
 DOMAIN-SUFFIX,nflxso.net
 DOMAIN-SUFFIX,nflxvideo.net
+IP-CIDR,23.246.0.0/18,no-resolve
+IP-CIDR,37.77.184.0/21,no-resolve
+IP-CIDR,45.57.0.0/17,no-resolve
+IP-CIDR,64.120.128.0/17,no-resolve
+IP-CIDR,66.197.128.0/17,no-resolve
+IP-CIDR,108.175.32.0/20,no-resolve
+IP-CIDR,192.173.64.0/18,no-resolve
+IP-CIDR,198.38.96.0/19,no-resolve
+IP-CIDR,198.45.48.0/20,no-resolve
 
-# YouTube
-USER-AGENT,*youtube*
-USER-AGENT,YouTube*
-DOMAIN-KEYWORD,youtube
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,gvt2.com
-DOMAIN-SUFFIX,youtu.be
+# > Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
 
-# Amazon Prime Video
-USER-AGENT,InstantVideo.US*
-USER-AGENT,Prime%20Video*
-DOMAIN-SUFFIX,aiv-cdn.net
-DOMAIN-SUFFIX,amazonaws.com
-DOMAIN-SUFFIX,amazonvideo.com
-DOMAIN-SUFFIX,llnwd.net
+# > Twitch
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,twitchcdn.net
+DOMAIN-SUFFIX,ttvnw.net
 
-# Vimeo
+# > Vimeo
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
 
-# Disney Plus
-USER-AGENT,Disney*
-DOMAIN,cdn.registerdisney.go.com
-DOMAIN-SUFFIX,disneyplus.com
-DOMAIN-SUFFIX,disney-plus.net
-DOMAIN-SUFFIX,dssott.com
-DOMAIN-SUFFIX,bamgrid.com
-DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com
+# > YouTube
+USER-AGENT,com.google.ios.youtube*
+USER-AGENT,YouTube*
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN,youtubei.googleapis.com
 
-# HBO && HBO Go
-USER-AGENT,HBO%20NOW*
-DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com
-DOMAIN-SUFFIX,hbo.com
-DOMAIN-SUFFIX,hboasia.com
-DOMAIN-SUFFIX,hbogo.com
-DOMAIN-SUFFIX,hbogoasia.hk
+# Music
+# > SoundCloud
+USER-AGENT,SoundCloud*
+DOMAIN-SUFFIX,p-cdn.us
+DOMAIN-SUFFIX,sndcdn.com
+DOMAIN-SUFFIX,soundcloud.com
 
-# Hulu
-USER-AGENT,Hulu*
-DOMAIN-SUFFIX,happyon.jp
-DOMAIN-SUFFIX,hulu.com
-DOMAIN-SUFFIX,huluim.com
-DOMAIN-SUFFIX,hulustream.com
+# > Spotify
+USER-AGENT,Spotify*
+DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,spoti.fi
+
+# > TIDAL
+USER-AGENT,TIDAL*
+DOMAIN-SUFFIX,tidal.com
+
+# > YouTubeMusic
+USER-AGENT,com.google.ios.youtubemusic*
+USER-AGENT,YouTubeMusic*

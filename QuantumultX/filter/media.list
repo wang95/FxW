@@ -1,4 +1,50 @@
-# Netflix
+# Video
+# > Amazon Prime Video
+USER-AGENT,InstantVideo.US*,PROXY
+USER-AGENT,Prime%20Video*,PROXY
+HOST-SUFFIX,aiv-cdn.net,PROXY
+HOST-SUFFIX,aiv-delivery.net,PROXY
+HOST-SUFFIX,amazonvideo.com,PROXY
+HOST-SUFFIX,media-amazon.com,PROXY
+HOST-SUFFIX,primevideo.com,PROXY
+
+# > Disney+
+USER-AGENT,Disney+*,PROXY
+HOST-SUFFIX,bamgrid.com,PROXY
+HOST-SUFFIX,disney-plus.net,PROXY
+HOST-SUFFIX,disneyplus.com,PROXY
+HOST-SUFFIX,dssott.com,PROXY
+HOST,cdn.registerdisney.go.com,PROXY
+
+# > HBO NOW
+USER-AGENT,HBO%20NOW*,PROXY
+HOST-SUFFIX,hbo.com,PROXY
+HOST-SUFFIX,hbogo.com,PROXY
+HOST-SUFFIX,hbonow.com,PROXY
+
+# > HBO GO HKG
+USER-AGENT,HBO%20GO%20PROD%20HKG*,PROXY
+HOST-SUFFIX,hbogoasia.com,PROXY
+HOST-SUFFIX,hbogoasia.hk,PROXY
+HOST,bcbolthboa-a.akamaihd.net,PROXY
+HOST,players.brightcove.net,PROXY
+HOST,s3-ap-southeast-1.amazonaws.com,PROXY
+HOST,dai3fd1oh325y.cloudfront.net,PROXY
+HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,PROXY
+HOST,hboasia1-i.akamaihd.net,PROXY
+HOST,hboasia2-i.akamaihd.net,PROXY
+HOST,hboasia3-i.akamaihd.net,PROXY
+HOST,hboasia4-i.akamaihd.net,PROXY
+HOST,hboasia5-i.akamaihd.net,PROXY
+HOST,cf-images.ap-southeast-1.prod.boltdns.net,PROXY
+
+# > Hulu
+HOST-SUFFIX,hulu.com,PROXY
+HOST-SUFFIX,huluim.com,PROXY
+HOST-SUFFIX,hulustream.com,PROXY
+
+# > Netflix
+USER-AGENT,Argo*,PROXY
 HOST-SUFFIX,netflix.com,PROXY
 HOST-SUFFIX,netflix.net,PROXY
 HOST-SUFFIX,nflxext.com,PROXY
@@ -6,47 +52,55 @@ HOST-SUFFIX,nflximg.com,PROXY
 HOST-SUFFIX,nflximg.net,PROXY
 HOST-SUFFIX,nflxso.net,PROXY
 HOST-SUFFIX,nflxvideo.net,PROXY
+IP-CIDR,23.246.0.0/18,PROXY
+IP-CIDR,37.77.184.0/21,PROXY
+IP-CIDR,45.57.0.0/17,PROXY
+IP-CIDR,64.120.128.0/17,PROXY
+IP-CIDR,66.197.128.0/17,PROXY
+IP-CIDR,108.175.32.0/20,PROXY
+IP-CIDR,192.173.64.0/18,PROXY
+IP-CIDR,198.38.96.0/19,PROXY
+IP-CIDR,198.45.48.0/20,PROXY
 
-# YouTube
-USER-AGENT,*youtube*,PROXY
+# > Pornhub
+HOST-SUFFIX,phncdn.com,PROXY
+HOST-SUFFIX,pornhub.com,PROXY
+HOST-SUFFIX,pornhubpremium.com,PROXY
+
+# > Twitch
+HOST-SUFFIX,twitch.tv,PROXY
+HOST-SUFFIX,twitchcdn.net,PROXY
+HOST-SUFFIX,ttvnw.net,PROXY
+
+# > Vimeo
+HOST-SUFFIX,vimeo.com
+HOST-SUFFIX,vimeocdn.com
+
+# > YouTube
+USER-AGENT,com.google.ios.youtube*,PROXY
 USER-AGENT,YouTube*,PROXY
-HOST-KEYWORD,youtube,PROXY
 HOST-SUFFIX,googlevideo.com,PROXY
-HOST-SUFFIX,gvt2.com,PROXY
-HOST-SUFFIX,youtu.be,PROXY
+HOST-SUFFIX,youtube.com,PROXY
+HOST,youtubei.googleapis.com,PROXY
 
-# Amazon Prime Video
-USER-AGENT,InstantVideo.US*,PROXY
-USER-AGENT,Prime%20Video*,PROXY
-HOST-SUFFIX,aiv-cdn.net,PROXY
-HOST-SUFFIX,amazonaws.com,PROXY
-HOST-SUFFIX,amazonvideo.com,PROXY
-HOST-SUFFIX,llnwd.net,PROXY
+# Music
+# > SoundCloud
+USER-AGENT,SoundCloud*,PROXY
+HOST-SUFFIX,p-cdn.us,PROXY
+HOST-SUFFIX,sndcdn.com,PROXY
+HOST-SUFFIX,soundcloud.com,PROXY
 
-# Vimeo
-HOST-SUFFIX,vimeo.com,PROXY
-HOST-SUFFIX,vimeocdn.com,PROXY
+# > Spotify
+USER-AGENT,Spotify*,PROXY
+HOST-SUFFIX,pscdn.co,PROXY
+HOST-SUFFIX,scdn.co,PROXY
+HOST-SUFFIX,spotify.com,PROXY
+HOST-SUFFIX,spoti.fi,PROXY
 
-# Disney Plus
-USER-AGENT,Disney*,PROXY
-HOST,cdn.registerdisney.go.com,PROXY
-HOST-SUFFIX,disneyplus.com,PROXY
-HOST-SUFFIX,disney-plus.net,PROXY
-HOST-SUFFIX,dssott.com,PROXY
-HOST-SUFFIX,bamgrid.com,PROXY
-HOST-SUFFIX,execute-api.us-east-1.amazonaws.com,PROXY
+# > TIDAL
+USER-AGENT,TIDAL*,PROXY
+HOST-SUFFIX,tidal.com,PROXY
 
-# HBO && HBO Go
-USER-AGENT,HBO%20NOW*,PROXY
-HOST-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,PROXY
-HOST-SUFFIX,hbo.com,PROXY
-HOST-SUFFIX,hboasia.com,PROXY
-HOST-SUFFIX,hbogo.com,PROXY
-HOST-SUFFIX,hbogoasia.hk,PROXY
-
-# Hulu
-USER-AGENT,Hulu*,PROXY
-HOST-SUFFIX,happyon.jp,PROXY
-HOST-SUFFIX,hulu.com,PROXY
-HOST-SUFFIX,huluim.com,PROXY
-HOST-SUFFIX,hulustream.com,PROXY
+# > YouTubeMusic
+USER-AGENT,com.google.ios.youtubemusic*,PROXY
+USER-AGENT,YouTubeMusic*,PROXY
