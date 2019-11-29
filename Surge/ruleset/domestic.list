@@ -151,15 +151,15 @@ DOMAIN-SUFFIX,acfun.com
 DOMAIN-SUFFIX,acfun.tv
 DOMAIN-SUFFIX,aixifan.com
 
-# > IQIYI
+# > iQiyi
 USER-AGENT,QIYI*
 USER-AGENT,iQiYi*
-DOMAIN-KEYWORD,qiyi
+USER-AGENT,PPStream*
+USER-AGENT,QYPlayer*
 DOMAIN-SUFFIX,iqiyi.com
+DOMAIN-SUFFIX,iqiyipic.com
 DOMAIN-SUFFIX,qy.net
-IP-CIDR,101.227.0.0/16,no-resolve
-IP-CIDR,101.224.0.0/13,no-resolve
-IP-CIDR,119.176.0.0/12,no-resolve
+DOMAIN-SUFFIX,71.am
 
 # > Youku
 USER-AGENT,Youku*
