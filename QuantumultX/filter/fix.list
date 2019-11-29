@@ -1,7 +1,5 @@
 # Fix
 # > General
-USER-AGENT,coffeecorp*,DIRECT
-USER-AGENT,restaurant-mobile*,DIRECT
 HOST,app.adjust.com,DIRECT
 # > Google
 HOST-SUFFIX,googletraveladservices.com,DIRECT
