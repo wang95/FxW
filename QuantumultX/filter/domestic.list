@@ -196,4 +196,4 @@ HOST-SUFFIX,windowsupdate.com,DIRECT
 
 # > Other Global Sites
 HOST-SUFFIX,plex.driect,DIRECT
-HOST-SUFFIX,plex.tv
+HOST-SUFFIX,plex.tv,DIRECT
