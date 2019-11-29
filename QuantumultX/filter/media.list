@@ -73,8 +73,8 @@ HOST-SUFFIX,twitchcdn.net,PROXY
 HOST-SUFFIX,ttvnw.net,PROXY
 
 # > Vimeo
-HOST-SUFFIX,vimeo.com
-HOST-SUFFIX,vimeocdn.com
+HOST-SUFFIX,vimeo.com,PROXY
+HOST-SUFFIX,vimeocdn.com,PROXY
 
 # > YouTube
 USER-AGENT,com.google.ios.youtube*,PROXY
