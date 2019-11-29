@@ -549,3 +549,8 @@ DOMAIN-SUFFIX,x-art.com
 DOMAIN-SUFFIX,yimg.com
 DOMAIN,api.steampowered.com
 DOMAIN,store.steampowered.com
+
+# Speed test
+DOMAIN-SUFFIX,fast.com
+DOMAIN-KEYWORD,speedtest
+DOMAIN-SUFFIX,ooklaserver.net

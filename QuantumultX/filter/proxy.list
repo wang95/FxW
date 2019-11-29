@@ -549,3 +549,8 @@ HOST-SUFFIX,x-art.com,PROXY
 HOST-SUFFIX,yimg.com,PROXY
 HOST,api.steampowered.com,PROXY
 HOST,store.steampowered.com,PROXY
+
+# Speed test
+HOST-SUFFIX,fast.com,PROXY
+HOST-KEYWORD,speedtest,PROXY
+HOST-SUFFIX,ooklaserver.net,PROXY
