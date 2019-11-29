@@ -111,6 +111,7 @@ DOMAIN-SUFFIX,xunlei.com
 DOMAIN-SUFFIX,cnbeta.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,ele.me
+DOMAIN-SUFFIX,elemecdn.com
 DOMAIN-SUFFIX,smzdm.com
 
 # China Banks
@@ -195,5 +196,6 @@ DOMAIN-SUFFIX,windows.com
 DOMAIN-SUFFIX,windowsupdate.com
 
 # > Other Global Sites
+DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,plex.driect
 DOMAIN-SUFFIX,plex.tv

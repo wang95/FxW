@@ -111,6 +111,7 @@ HOST-SUFFIX,xunlei.com,DIRECT
 HOST-SUFFIX,cnbeta.com,DIRECT
 HOST-SUFFIX,ifeng.com,DIRECT
 HOST-SUFFIX,ele.me,DIRECT
+HOST-SUFFIX,elemecdn.com,DIRECT
 HOST-SUFFIX,smzdm.com,DIRECT
 
 # China Banks
@@ -195,5 +196,6 @@ HOST-SUFFIX,windows.com,DIRECT
 HOST-SUFFIX,windowsupdate.com,DIRECT
 
 # > Other Global Sites
+HOST-SUFFIX,crashlytics.com,DIRECT
 HOST-SUFFIX,plex.driect,DIRECT
 HOST-SUFFIX,plex.tv,DIRECT
