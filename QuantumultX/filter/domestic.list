@@ -97,22 +97,23 @@ HOST-SUFFIX,zmzfile.com,DIRECT
 
 # > Other China Sites
 HOST-SUFFIX,cn,DIRECT
-HOST-SUFFIX,zhihu.com,DIRECT
-HOST-SUFFIX,zhimg.com,DIRECT
+HOST-SUFFIX,cnbeta.com,DIRECT
 HOST-SUFFIX,douban.com,DIRECT
 HOST-SUFFIX,doubanio.com,DIRECT
-HOST-SUFFIX,yinxiang.com,DIRECT
+HOST-SUFFIX,ele.me,DIRECT
+HOST-SUFFIX,elemecdn.com,DIRECT
+HOST-SUFFIX,ifeng.com,DIRECT
+HOST-SUFFIX,smzdm.com,DIRECT
 HOST-SUFFIX,sspai.com,DIRECT
+HOST-SUFFIX,v2ex.com,DIRECT
 HOST-SUFFIX,weidian.com,DIRECT
 HOST-SUFFIX,xiachufang.com,DIRECT
 HOST-SUFFIX,ximalaya.com,DIRECT
 HOST-SUFFIX,xmcdn.com,DIRECT
 HOST-SUFFIX,xunlei.com,DIRECT
-HOST-SUFFIX,cnbeta.com,DIRECT
-HOST-SUFFIX,ifeng.com,DIRECT
-HOST-SUFFIX,ele.me,DIRECT
-HOST-SUFFIX,elemecdn.com,DIRECT
-HOST-SUFFIX,smzdm.com,DIRECT
+HOST-SUFFIX,yinxiang.com,DIRECT
+HOST-SUFFIX,zhihu.com,DIRECT
+HOST-SUFFIX,zhimg.com,DIRECT
 
 # China Banks
 # > China Merchants Bank

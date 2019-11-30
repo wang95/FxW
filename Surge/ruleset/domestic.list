@@ -97,22 +97,23 @@ DOMAIN-SUFFIX,zmzfile.com
 
 # > Other China Sites
 DOMAIN-SUFFIX,cn
-DOMAIN-SUFFIX,zhihu.com
-DOMAIN-SUFFIX,zhimg.com
+DOMAIN-SUFFIX,cnbeta.com
 DOMAIN-SUFFIX,douban.com
 DOMAIN-SUFFIX,doubanio.com
-DOMAIN-SUFFIX,yinxiang.com
+DOMAIN-SUFFIX,ele.me
+DOMAIN-SUFFIX,elemecdn.com
+DOMAIN-SUFFIX,ifeng.com
+DOMAIN-SUFFIX,smzdm.com
 DOMAIN-SUFFIX,sspai.com
+DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,weidian.com
 DOMAIN-SUFFIX,xiachufang.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 DOMAIN-SUFFIX,xunlei.com
-DOMAIN-SUFFIX,cnbeta.com
-DOMAIN-SUFFIX,ifeng.com
-DOMAIN-SUFFIX,ele.me
-DOMAIN-SUFFIX,elemecdn.com
-DOMAIN-SUFFIX,smzdm.com
+DOMAIN-SUFFIX,yinxiang.com
+DOMAIN-SUFFIX,zhihu.com
+DOMAIN-SUFFIX,zhimg.com
 
 # China Banks
 # > China Merchants Bank
