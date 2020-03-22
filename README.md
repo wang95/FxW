@@ -10,4 +10,5 @@ Some config files for personal use.
 * [GeQ1an/Rules](https://github.com/GeQ1an/Rules)
 * [NobyDa/Script](https://github.com/NobyDa/Script)
 * [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
+* [KOP-XIAO/QuantumultX-Surge-API](https://github.com/KOP-XIAO/QuantumultX-Surge-API)
 * [Koolson/Qure](https://github.com/Koolson/Qure)
