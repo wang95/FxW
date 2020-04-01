@@ -64,6 +64,7 @@ IP-CIDR,198.45.48.0/20,no-resolve
 
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
 

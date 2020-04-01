@@ -33,15 +33,18 @@ DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.hk
 
 # > Tencent
+USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1* //企业微信
 DOMAIN-SUFFIX,gtimg.com
 DOMAIN-SUFFIX,idqqimg.com
 DOMAIN-SUFFIX,igamecj.com
 DOMAIN-SUFFIX,myapp.com
 DOMAIN-SUFFIX,myqcloud.com
 DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,qcloud.com
+DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,tencent.com
 DOMAIN-SUFFIX,tencent-cloud.net
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN,file-igamecj.akamaized.net
 
 # > JD
 DOMAIN-SUFFIX,jd.com
@@ -94,6 +97,21 @@ DOMAIN-SUFFIX,zmz2019.com
 DOMAIN-SUFFIX,zmzapi.com
 DOMAIN-SUFFIX,zmzapi.net
 DOMAIN-SUFFIX,zmzfile.com
+DOMAIN-SUFFIX,rrys.tv
+DOMAIN-SUFFIX,rrys2019.com
+DOMAIN-SUFFIX,got001.com
+
+# > 360
+DOMAIN-SUFFIX,qhres.com
+DOMAIN-SUFFIX,qhimg.com
+
+# > Akamai
+DOMAIN-SUFFIX,akadns.net
+# DOMAIN-SUFFIX,akamai.net
+# DOMAIN-SUFFIX,akamaiedge.net
+# DOMAIN-SUFFIX,akamaihd.net
+# DOMAIN-SUFFIX,akamaistream.net
+# DOMAIN-SUFFIX,akamaized.net
 
 # > Other China Sites
 DOMAIN-SUFFIX,cn
@@ -114,6 +132,8 @@ DOMAIN-SUFFIX,xunlei.com
 DOMAIN-SUFFIX,yinxiang.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
+DOMAIN,images-cn.ssl-images-amazon.com
+DOMAIN,cdn.angruo.com
 
 # China Banks
 # > China Merchants Bank
@@ -135,7 +155,8 @@ DOMAIN-SUFFIX,psbc.com
 
 # China Media
 # > Bilibili
-USER-AGENT,*bili*
+USER-AGENT,bili*
+USER-AGENT,Bilibili*
 DOMAIN-SUFFIX,acg.tv
 DOMAIN-SUFFIX,acgvideo.com
 DOMAIN-SUFFIX,b23.tv
@@ -144,6 +165,7 @@ DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,biligame.net
+DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,im9.com
 
@@ -164,6 +186,7 @@ DOMAIN-SUFFIX,qy.net
 DOMAIN-SUFFIX,71.am
 
 # > Youku
+USER-AGENT,%E4%BC%98%E9%85%B7* //优酷
 USER-AGENT,Youku*
 DOMAIN-SUFFIX,soku.com
 DOMAIN-SUFFIX,youku.com
@@ -195,6 +218,7 @@ DOMAIN-SUFFIX,s-microsoft.com
 DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,windows.com
 DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN,officecdn-microsoft-com.akamaized.net
 
 # > Other Global Sites
 DOMAIN-SUFFIX,crashlytics.com
