@@ -12,3 +12,4 @@ Some config files for personal use.
 * [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
 * [KOP-XIAO/QuantumultX-Surge-API](https://github.com/KOP-XIAO/QuantumultX-Surge-API)
 * [Koolson/Qure](https://github.com/Koolson/Qure)
+* [tindy2013/subconverter](https://github.com/tindy2013/subconverter)
