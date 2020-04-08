@@ -33,6 +33,7 @@ HOST-SUFFIX,tmall.com,DIRECT
 HOST-SUFFIX,tmall.hk,DIRECT
 
 # > Tencent
+USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*,DIRECT //企业微信
 HOST-SUFFIX,gtimg.com,DIRECT
 HOST-SUFFIX,idqqimg.com,DIRECT
 HOST-SUFFIX,igamecj.com,DIRECT
@@ -40,8 +41,11 @@ HOST-SUFFIX,myapp.com,DIRECT
 HOST-SUFFIX,myqcloud.com,DIRECT
 HOST-SUFFIX,qq.com,DIRECT
 HOST-SUFFIX,qcloud.com,DIRECT
+HOST-SUFFIX,servicewechat.com,DIRECT
 HOST-SUFFIX,tencent.com,DIRECT
 HOST-SUFFIX,tencent-cloud.net,DIRECT
+HOST-SUFFIX,tenpay.com,DIRECT
+HOST,file-igamecj.akamaized.net,DIRECT
 
 # > JD
 HOST-SUFFIX,jd.com,DIRECT
@@ -94,6 +98,21 @@ HOST-SUFFIX,zmz2019.com,DIRECT
 HOST-SUFFIX,zmzapi.com,DIRECT
 HOST-SUFFIX,zmzapi.net,DIRECT
 HOST-SUFFIX,zmzfile.com,DIRECT
+HOST-SUFFIX,rrys.tv,DIRECT
+HOST-SUFFIX,rrys2019.com,DIRECT
+HOST-SUFFIX,got001.com,DIRECT
+
+# > 360
+HOST-SUFFIX,qhres.com,DIRECT
+HOST-SUFFIX,qhimg.com,DIRECT
+
+# > Akamai
+HOST-SUFFIX,akadns.net,DIRECT
+# HOST-SUFFIX,akamai.net,DIRECT
+# HOST-SUFFIX,akamaiedge.net,DIRECT
+# HOST-SUFFIX,akamaihd.net,DIRECT
+# HOST-SUFFIX,akamaistream.net,DIRECT
+# HOST-SUFFIX,akamaized.net,DIRECT
 
 # > Other China Sites
 HOST-SUFFIX,cn,DIRECT
@@ -135,7 +154,8 @@ HOST-SUFFIX,psbc.com,DIRECT
 
 # China Media
 # > Bilibili
-USER-AGENT,*bili*,DIRECT
+USER-AGENT,bili*,DIRECT
+USER-AGENT,Bilibili*,DIRECT
 HOST-SUFFIX,acg.tv,DIRECT
 HOST-SUFFIX,acgvideo.com,DIRECT
 HOST-SUFFIX,b23.tv,DIRECT
@@ -144,6 +164,7 @@ HOST-SUFFIX,biliapi.net,DIRECT
 HOST-SUFFIX,bilibili.com,DIRECT
 HOST-SUFFIX,biligame.com,DIRECT
 HOST-SUFFIX,biligame.net,DIRECT
+HOST-SUFFIX,bilivideo.com,DIRECT
 HOST-SUFFIX,hdslb.com,DIRECT
 HOST-SUFFIX,im9.com,DIRECT
 
@@ -164,6 +185,7 @@ HOST-SUFFIX,qy.net,DIRECT
 HOST-SUFFIX,71.am,DIRECT
 
 # > Youku
+USER-AGENT,%E4%BC%98%E9%85%B7*,DIRECT //优酷
 USER-AGENT,Youku*,DIRECT
 HOST-SUFFIX,soku.com,DIRECT
 HOST-SUFFIX,youku.com,DIRECT
@@ -195,6 +217,7 @@ HOST-SUFFIX,s-microsoft.com,DIRECT
 HOST-SUFFIX,visualstudio.com,DIRECT
 HOST-SUFFIX,windows.com,DIRECT
 HOST-SUFFIX,windowsupdate.com,DIRECT
+HOST,officecdn-microsoft-com.akamaized.net,DIRECT
 
 # > Other Global Sites
 HOST-SUFFIX,crashlytics.com,DIRECT

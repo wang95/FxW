@@ -64,6 +64,7 @@ IP-CIDR,198.45.48.0/20,PROXY
 
 # > Pornhub
 HOST-SUFFIX,phncdn.com,PROXY
+HOST-SUFFIX,phprcdn.com,PROXY
 HOST-SUFFIX,pornhub.com,PROXY
 HOST-SUFFIX,pornhubpremium.com,PROXY
 
