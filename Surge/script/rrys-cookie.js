@@ -1,5 +1,5 @@
 /*
-获取人人影视 Cookie http://www.rrys2019.com/
+获取人人影视 Cookie http://www.rrys2019.com
 README https://github.com/chavyleung/scripts/tree/master/zimuzu
 */
 

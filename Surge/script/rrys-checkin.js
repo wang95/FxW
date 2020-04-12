@@ -1,5 +1,5 @@
 /*
-人人影视签到 http://www.rrys2019.com/
+人人影视签到 http://www.rrys2019.com
 README https://github.com/chavyleung/scripts/tree/master/zimuzu
 */
 
