@@ -1,12 +1,12 @@
 #!name=Get Cookie
-#!desc=定时签到脚本 Cookie 获取. 包含京东, 人人影视(网页版&APP), V2EX. 可以在获取到 Cookie 后禁用, 避免产生不必要的MITM.
+#!desc=定时签到脚本 Cookie 获取，包含京东，人人影视(网页版&APP)，V2EX 。可以在获取到 Cookie 后禁用，避免产生不必要的 MITM 。
 #!system=ios
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, *.rrys2019.com, ios.zmzapi.com, *.v2ex.com
 
 [Script]
 JD-Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/JD-DailyBonus.js
 RRYS-Cookie = type=http-request,pattern=^https?:\/\/(www\.)?rrys2019\.com\/?.?,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/RRYS-cookie.js
 RRYS-App-Cookie = type=http-request,pattern=^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/RRYS-cookie.js
-V2EX-Cookie = type=http-request,pattern=^https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/V2EX-cookie.js,script-update-interval=0
-
-[MITM]
-hostname = %APPEND% api.m.jd.com, *.rrys2019.com, ios.zmzapi.com, *.v2ex.com
+V2EX-Cookie = type=http-request,pattern=^https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/V2EX-cookie.js
