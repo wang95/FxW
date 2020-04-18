@@ -1,5 +1,5 @@
 #!name=Get Cookie
-#!desc=定时签到脚本 Cookie 获取. 集成: 京东, 人人影视(网页版&APP), V2EX. 可以在获取到 Cookie 后禁用，避免产生不必要的MITM.
+#!desc=定时签到脚本 Cookie 获取. 包含京东, 人人影视(网页版&APP), V2EX. 可以在获取到 Cookie 后禁用, 避免产生不必要的MITM.
 #!system=ios
 
 [Script]
