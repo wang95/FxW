@@ -1,5 +1,5 @@
 #!name=YouTube AdBlock
-#!desc=Block YouTube ADs
+#!desc=Skip Ads on YouTube
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com
