@@ -45,6 +45,7 @@ HOST-SUFFIX,servicewechat.com,DIRECT
 HOST-SUFFIX,tencent.com,DIRECT
 HOST-SUFFIX,tencent-cloud.net,DIRECT
 HOST-SUFFIX,tenpay.com,DIRECT
+HOST-SUFFIX,weiyun.com,DIRECT
 HOST,file-igamecj.akamaized.net,DIRECT
 
 # > JD
