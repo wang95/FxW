@@ -134,6 +134,9 @@ HOST-SUFFIX,xunlei.com,DIRECT
 HOST-SUFFIX,yinxiang.com,DIRECT
 HOST-SUFFIX,zhihu.com,DIRECT
 HOST-SUFFIX,zhimg.com,DIRECT
+HOST-SUFFIX,manmanbuy.com,DIRECT
+HOST,images-cn.ssl-images-amazon.com,DIRECT
+HOST,cdn.angruo.com,DIRECT
 
 # China Banks
 # > China Merchants Bank
