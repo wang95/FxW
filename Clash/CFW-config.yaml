@@ -96,8 +96,8 @@ proxy-groups:
 
   - name: 🚫Hijacking
     proxies:
-      - REJECT
       - DIRECT
+      - REJECT
     type: select
 
   - name: 🛸Final
