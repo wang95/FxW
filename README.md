@@ -11,6 +11,7 @@ Some config files for personal use.
 * [ConnersHua/Profiles](https://github.com/ConnersHua/Profiles)
 * [GeQ1an/Rules](https://github.com/GeQ1an/Rules)
 * [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
+* [DivineEngine/Profiles](https://github.com/DivineEngine/Profiles)
 
 ### Scripts
 
