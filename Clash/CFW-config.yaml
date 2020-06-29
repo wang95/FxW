@@ -4,6 +4,7 @@ allow-lan: false
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:8910
+
 # cfw-font-family: "更纱黑体 UI SC"
 
 cfw-bypass:
@@ -31,6 +32,7 @@ cfw-bypass:
   - 172.31.*
   - 192.168.*
   - <local>
+
 cfw-latency-timeout: 5000
 
 proxies:
