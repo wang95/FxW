@@ -36,7 +36,7 @@ cfw-bypass:
 cfw-latency-timeout: 5000
 
 proxies:
-  - name: 🇺🇲 BW-US
+  - name: 🇺🇸 BW-US
     type: ss
     server: 0.0.0.0
     port: 445
@@ -87,10 +87,16 @@ proxy-groups:
 
   - name: 🚀BW-ALT
     proxies:
-      - 🇺🇲 BW-US
+      - 🇺🇸 BW-US
     type: select
 
   - name: 📺MediaProxy
+    proxies:
+      - 🌎PROXY
+      - 🚀BW-ALT
+    type: select
+
+  - name: 💵PayPal
     proxies:
       - 🌎PROXY
       - 🚀BW-ALT
@@ -130,6 +136,13 @@ rule-providers:
     url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/media.yaml
     interval: 86400
 
+  PayPal:
+    type: http
+    behavior: classical
+    path: ./ruleset/PayPal.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/PayPal.yaml
+    interval: 86400
+
   proxy:
     type: http
     behavior: classical
@@ -149,6 +162,7 @@ rules:
   - RULE-SET,fix,DIRECT
   - RULE-SET,hijacking,🚫Hijacking
   - RULE-SET,media,📺MediaProxy
+  - RULE-SET,PayPal,💵PayPal
   - RULE-SET,proxy,🌎PROXY
   - RULE-SET,domestic,DIRECT
 
