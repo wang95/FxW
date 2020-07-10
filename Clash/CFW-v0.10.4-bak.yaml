@@ -1,5 +1,5 @@
 mixed-port: 7890
-# redir-port: 7891
+# redir-port: 7892
 allow-lan: false
 mode: rule
 log-level: info
@@ -8,9 +8,6 @@ external-controller: 127.0.0.1:8910
 # cfw-font-family: "更纱黑体 UI SC"
 
 cfw-bypass:
-  - qq.com
-  - music.163.com
-  - "*.music.126.net"
   - localhost
   - 127.*
   - 10.*
@@ -32,6 +29,9 @@ cfw-bypass:
   - 172.31.*
   - 192.168.*
   - <local>
+  - qq.com
+  - music.163.com
+  - '*.music.126.net'
 
 cfw-latency-timeout: 5000
 

@@ -1,0 +1,166 @@
+# port of HTTP
+# port: 7890
+
+# port of SOCKS5
+# socks-port: 7891
+
+# HTTP and SOCKS5 in one port
+mixed-port: 7890
+
+# redir port for Linux and macOS
+# redir-port: 7892
+
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:8910
+
+proxies:
+  - name: 🇺🇸 BW-US
+    type: ss
+    server: 0.0.0.0
+    port: 445
+    cipher: chacha20-ietf-poly1305
+    password: pwd
+
+proxy-providers:
+  SubName:
+    type: http
+    path: ./subname.yaml
+    url: https://exmaple.com/proxygroup.list
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+
+proxy-groups:
+  - name: 🌎PROXY
+    proxies:
+      - ✈SubName
+      - ⚡SubName-Auto
+      - 🚁SubName-Fallback
+      - 🚀BW-ALT
+    type: select
+
+  - name: ✈SubName
+    type: select
+    proxies: null
+    use:
+      - SubName
+
+  - name: ⚡SubName-Auto
+    proxies: null
+    use:
+      - SubName
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3000
+
+  - name: 🚁SubName-Fallback
+    proxies: null
+    use:
+      - SubName
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 3000
+
+  - name: 🚀BW-ALT
+    proxies:
+      - 🇺🇸 BW-US
+    type: select
+
+  - name: 📺MediaProxy
+    proxies:
+      - 🌎PROXY
+      - 🚀BW-ALT
+    type: select
+
+  - name: 💵PayPal
+    proxies:
+      - 🌎PROXY
+      - 🚀BW-ALT
+    type: select
+
+  - name: 🚫Hijacking
+    proxies:
+      - DIRECT
+      - REJECT
+    type: select
+
+  - name: 🛸Final
+    proxies:
+      - 🌎PROXY
+      - DIRECT
+    type: select
+
+rule-providers:
+  fix:
+    type: http
+    behavior: classical
+    path: ./ruleset/fix.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/fix.yaml
+    interval: 86400
+
+  hijacking:
+    type: http
+    behavior: classical
+    path: ./ruleset/hijacking.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/hijacking.yaml
+    interval: 86400
+
+  media:
+    type: http
+    behavior: classical
+    path: ./ruleset/media.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/media.yaml
+    interval: 86400
+
+  PayPal:
+    type: http
+    behavior: classical
+    path: ./ruleset/PayPal.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/PayPal.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: classical
+    path: ./ruleset/proxy.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/proxy.yaml
+    interval: 86400
+
+  domestic:
+    type: http
+    behavior: classical
+    path: ./ruleset/domestic.yaml
+    url: https://github.com/wang95/FxW/raw/master/Clash/ruleset/domestic.yaml
+    interval: 86400
+
+rules:
+  # Rulesets
+  - RULE-SET,fix,DIRECT
+  - RULE-SET,hijacking,🚫Hijacking
+  - RULE-SET,media,📺MediaProxy
+  - RULE-SET,PayPal,💵PayPal
+  - RULE-SET,proxy,🌎PROXY
+  - RULE-SET,domestic,DIRECT
+
+  # LAN
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+
+  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
+  # - RULE-SET,ChinaIP,DIRECT
+  # Tencent
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  # GeoIP CN
+  - GEOIP,CN,DIRECT
+
+  # Others
+  - MATCH,🛸Final
