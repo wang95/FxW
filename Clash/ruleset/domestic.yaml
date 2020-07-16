@@ -382,3 +382,17 @@ payload:
   - DOMAIN-SUFFIX,zhuihd.com
   - DOMAIN,download.jetbrains.com
   - DOMAIN,images-cn.ssl-images-amazon.com
+
+  # > YYeTs
+  - USER-AGENT,YYeTs*
+  - DOMAIN-SUFFIX,jstucdn.com
+  - DOMAIN-SUFFIX,zimuzu.io
+  - DOMAIN-SUFFIX,zimuzu.tv
+  - DOMAIN-SUFFIX,zmz2019.com
+  - DOMAIN-SUFFIX,zmzapi.com
+  - DOMAIN-SUFFIX,zmzapi.net
+  - DOMAIN-SUFFIX,zmzfile.com
+  - DOMAIN-SUFFIX,rrys.tv
+  - DOMAIN-SUFFIX,rrys2019.com
+  - DOMAIN-SUFFIX,rrys2020.com
+  - DOMAIN-SUFFIX,got001.com

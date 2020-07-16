@@ -3,10 +3,10 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, *.rrys2019.com, ios.zmzapi.com, *.v2ex.com
+hostname = %APPEND% api.m.jd.com, *.rrys2020.com, ios.zmzapi.com, *.v2ex.com
 
 [Script]
 JD-Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/JD-DailyBonus.js
-RRYS-Cookie = type=http-request,pattern=^https?:\/\/(www\.)?rrys2019\.com\/?.?,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/RRYS-cookie.js
+RRYS-Cookie = type=http-request,pattern=^https?:\/\/(www\.)?rrys2020\.com\/?.?,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/RRYS-cookie.js
 RRYS-App-Cookie = type=http-request,pattern=^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/RRYS-cookie.js
 V2EX-Cookie = type=http-request,pattern=^https:\/\/www\.v2ex\.com\/mission\/daily,script-path=https://github.com/wang95/FxW/raw/master/Surge/script/V2EX-cookie.js
