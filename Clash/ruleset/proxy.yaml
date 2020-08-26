@@ -99,6 +99,7 @@ payload:
   - DOMAIN-SUFFIX,bibox.com
   - DOMAIN-SUFFIX,biggo.com.tw
   - DOMAIN-SUFFIX,binance.com
+  - DOMAIN-SUFFIX,bit.ly
   - DOMAIN-SUFFIX,bitcointalk.org
   - DOMAIN-SUFFIX,bitfinex.com
   - DOMAIN-SUFFIX,bitmex.com
