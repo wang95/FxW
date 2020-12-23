@@ -24,12 +24,22 @@ external-controller: 127.0.0.1:8910
 # ----------------------------------------------------------------------
 
 proxies:
-  - name: 🇺🇸 BW-US
+  - name: 🇺🇸 LA-SS
     type: ss
     server: 0.0.0.0
     port: 445
     cipher: chacha20-ietf-poly1305
     password: pwd
+
+  - name: 🇺🇸 LA-Snell
+    type: snell
+    server: 0.0.0.0
+    port: 445
+    psk: xxxxx
+    version: 2
+    obfs-opts:
+      mode: http # 或 tls
+      host: cloudfront.net
 
 proxy-providers:
   SubName:
@@ -75,7 +85,8 @@ proxy-groups:
 
   - name: 🚀BW-ALT
     proxies:
-      - 🇺🇸 BW-US
+      - 🇺🇸 LA-Snell
+      - 🇺🇸 LA-SS
     type: select
 
   - name: 📺MediaProxy
