@@ -1,19 +1,19 @@
 /*
 京东显示历史价格
+README：https://github.com/yichahucha/surge/tree/master
 
 # 不生效或失效的检查一下配置有没有这两条复写，删除试试
 # ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start - reject
 # ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) - reject
 [Script]
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
 [MITM]
 hostname = api.m.jd.com
-
-README：https://github.com/yichahucha/surge/tree/master
  */
 
 const path1 = "serverConfig";
 const path2 = "wareBusiness";
+const path3 = "basicConfig";
 const consolelog = false;
 const url = $request.url;
 const body = $response.body;
@@ -22,7 +22,19 @@ const $tool = tool();
 if (url.indexOf(path1) != -1) {
     let obj = JSON.parse(body);
     delete obj.serverConfig.httpdns;
+    delete obj.serverConfig.dnsvip;
+    delete obj.serverConfig.dnsvip_v6;
     $done({ body: JSON.stringify(obj) });
+}
+
+if (url.indexOf(path3) != -1) {
+    let obj = JSON.parse(body);
+    let JDHttpToolKit = obj.data.JDHttpToolKit;
+    if (JDHttpToolKit) {
+        delete obj.data.JDHttpToolKit.httpdns;
+        delete obj.data.JDHttpToolKit.dnsvipV6;
+    }
+    $done({ body: JSON.stringify(obj) }); $done({ body });
 }
 
 if (url.indexOf(path2) != -1) {
@@ -92,7 +104,7 @@ function priceSummary(data) {
 
 function historySummary(single) {
     const rexMatch = /\[.*?\]/g;
-    const rexExec = /\[(.*),(.*),"(.*)"\]/;
+    const rexExec = /\[(.*),(.*),"(.*)".*\]/;
     let currentPrice, lowest60, lowest180, lowest360
     let list = single.jiagequshiyh.match(rexMatch);
     list = list.reverse().slice(0, 360);
