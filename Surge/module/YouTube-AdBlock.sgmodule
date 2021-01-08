@@ -1,8 +1,10 @@
 #!name=YouTube AdBlock
 #!desc=Skip Ads on YouTube
+#!system=ios
+
+[URL Rewrite]
+(^https?:\/\/[\w-]+\.googlevideo\.com\/.+)(ctier=L)(&.+) $1$3 302
+^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) - reject
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com
-
-[Script]
-YouTube-AdBlock = type=http-request,pattern=^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier),script-path=https://github.com/wang95/FxW/raw/master/Surge/script/YouTube-AdBlock.js
