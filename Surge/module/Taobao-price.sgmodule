@@ -2,14 +2,6 @@
 #!desc=显示淘宝商品历史价格，接口来源于慢慢买。不生效需要卸载淘宝重装，注意禁用此模块情况下进淘宝会失效
 #!system=ios
 
-[Rule]
-# 淘宝历史价格特殊规则
-# https://github.com/yichahucha/surge/tree/master
-IP-CIDR,203.119.144.0/23,REJECT,no-resolve
-IP-CIDR,203.119.175.0/24,REJECT,no-resolve
-IP-CIDR,106.11.162.0/24,REJECT,no-resolve
-IP-CIDR,47.102.83.0/24,REJECT,no-resolve
-
 [MITM]
 hostname = %APPEND% trade-acs.m.taobao.com
 
