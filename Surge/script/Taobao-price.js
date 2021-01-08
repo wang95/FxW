@@ -1,5 +1,6 @@
 /*
 淘宝显示历史价格
+README：https://github.com/yichahucha/surge/tree/master
 
 # 不生效或失效的需要卸载 tb 重装，注意不开脚本进 tb 会失效
 [Script]
@@ -7,8 +8,6 @@ http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://
 http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 [MITM]
 hostname = trade-acs.m.taobao.com
-
-README：https://github.com/yichahucha/surge/tree/master
  */
 
 const $tool = new Tool()
@@ -195,7 +194,7 @@ function priceSummary(data) {
 
 function historySummary(single) {
     const rexMatch = /\[.*?\]/g;
-    const rexExec = /\[(.*),(.*),"(.*)"\]/;
+    const rexExec = /\[(.*),(.*),"(.*)".*\]/;
     let currentPrice, lowest60, lowest180, lowest360
     let list = single.jiagequshiyh.match(rexMatch);
     list = list.reverse().slice(0, 360);
