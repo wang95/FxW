@@ -19,6 +19,7 @@ Some config files for personal use.
 * [yichahucha/surge](https://github.com/yichahucha/surge)
 * [chavyleung/scripts](https://github.com/chavyleung/scripts)
 * [Choler/Surge](https://github.com/Choler/Surge)
+* [VirgilClyne/iRingo](https://github.com/VirgilClyne/iRingo)
 
 ### API
 
