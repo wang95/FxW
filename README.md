@@ -2,16 +2,16 @@
 
 Some config files for personal use.
 
-## Inspired by
+## Thanks to
 
 ### Rules
 
+* [DivineEngine/Profiles](https://github.com/DivineEngine/Profiles)
 * [lhie1/Rules](https://github.com/lhie1/Rules)
 * [scomper/Surge](https://github.com/scomper/Surge)
 * [ConnersHua/Profiles](https://github.com/ConnersHua/Profiles)
 * [GeQ1an/Rules](https://github.com/GeQ1an/Rules)
 * [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
-* [DivineEngine/Profiles](https://github.com/DivineEngine/Profiles)
 
 ### Scripts
 
@@ -26,6 +26,6 @@ Some config files for personal use.
 * [tindy2013/subconverter](https://github.com/tindy2013/subconverter)
 * [KOP-XIAO/QuantumultX-Surge-API](https://github.com/KOP-XIAO/QuantumultX-Surge-API)
 
-### Icon
-
+### Others
+* [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN)
 * [Koolson/Qure](https://github.com/Koolson/Qure)
