@@ -381,3 +381,8 @@ payload:
 
   - DOMAIN,download.jetbrains.com
   - DOMAIN,images-cn.ssl-images-amazon.com
+
+  # Others
+  # > zimuku
+  - DOMAIN-SUFFIX,zmk.pw
+  - DOMAIN-SUFFIX,zimuku.org
