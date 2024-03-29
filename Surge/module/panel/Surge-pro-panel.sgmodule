@@ -1,0 +1,10 @@
+#!name=Panel - Surge Pro
+#!desc=显示 Surge 启动时间， 点击刷新按钮重载配置
+#!system=ios
+#!category=Panel
+
+[Panel]
+Suge-pro = script-name=Surge-pro,update-interval=1
+
+[Script]
+Surge-pro = type=generic,timeout=10,script-path=https://github.com/wang95/FxW/raw/master/Surge/module/panel/Surge-pro.js,argument=icon=waveform&color=#f6c970

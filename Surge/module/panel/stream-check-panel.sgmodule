@@ -1,0 +1,10 @@
+#!name=Panel - 流媒体解锁检测
+#!desc=流媒体解锁检测，支持 YouTube, Netflix, Disney+
+#!system=ios
+#!category=Panel
+
+[Panel]
+stream-check = script-name=stream-check, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
+
+[Script]
+stream-check = type=generic, timeout=15, script-path=https://github.com/wang95/FxW/raw/master/Surge/module/panel/stream-check.js

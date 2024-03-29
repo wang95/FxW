@@ -1,0 +1,10 @@
+#!name=Panel - 节点信息
+#!desc=显示节点 IP 信息
+#!system=ios
+#!category=Panel
+
+[Panel]
+IP-check = script-name=IP-check, title="节点信息", content="请刷新", style=info, update-interval=1
+
+[Script]
+IP-check = type=generic,timeout=3,script-path=https://github.com/wang95/FxW/raw/master/Surge/module/panel/ip-check.js
