@@ -4,7 +4,7 @@ Some config files for personal use.
 
 ## Thanks to
 
-### Rules
+### Rules & Config
 
 * [DivineEngine/Profiles](https://github.com/DivineEngine/Profiles)
 * [lhie1/Rules](https://github.com/lhie1/Rules)
@@ -13,6 +13,8 @@ Some config files for personal use.
 * [GeQ1an/Rules](https://github.com/GeQ1an/Rules)
 * [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
 * [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
+* [Rabbit-Spec/Clash](https://github.com/Rabbit-Spec/Clash)
+* [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge)
 
 ### Scripts
 
@@ -28,5 +30,6 @@ Some config files for personal use.
 * [KOP-XIAO/QuantumultX-Surge-API](https://github.com/KOP-XIAO/QuantumultX-Surge-API)
 
 ### Others
+
 * [Hackl0us/GeoIP2-CN](https://github.com/Hackl0us/GeoIP2-CN)
 * [Koolson/Qure](https://github.com/Koolson/Qure)
