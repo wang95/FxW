@@ -15,7 +15,7 @@ allow-lan: false
 mode: rule
 log-level: info
 # random external controller port support (enable by default) v0.13.6+
-external-controller: 127.0.0.1:8910
+external-controller: 127.0.0.1:9090
 
 # Clash for Windows 配置说明
 # 对于 CFW，以上配置需在 Home Directory/config.yaml 配置生效，用户配置文件(Profiles/xxxxx.yml)不需要配置此部分

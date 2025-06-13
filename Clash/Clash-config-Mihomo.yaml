@@ -1,0 +1,181 @@
+# Clash 配置文件 By Wang95
+# 适用于 Mihomo 内核
+# 2025-06-13
+
+# 参考：
+# https://wiki.metacubex.one/config/
+# https://clash.wiki/configuration/configuration-reference.html
+# https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
+# https://github.com/Rabbit-Spec/Clash/blob/Master/Yaml/Clash_Max.yaml
+
+# port: 7891
+# socks-port: 7892
+mixed-port: 7890
+# redir-port: 7893
+# tproxy-port: 7894
+
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: true
+
+external-controller: 127.0.0.1:9090
+external-ui: ui
+# external-ui-name: metacubexd
+# external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+external-ui-name: zashboard
+external-ui-url: 'https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip'
+secret: yoursecret
+
+proxies:
+  - name: 🇺🇸 LA-SS
+    type: ss
+    server: 0.0.0.0
+    port: 445
+    cipher: chacha20-ietf-poly1305
+    password: pwd
+
+  - name: 🇺🇸 LA-Snell
+    type: snell
+    server: 0.0.0.0
+    port: 445
+    psk: xxxxx
+    version: 2
+    obfs-opts:
+      mode: http # 或 tls
+      host: cloudfront.net
+
+  - name: Office1
+    type: ss
+    server: 0.0.0.0
+    port: 445
+    cipher: aes-256-gcm
+    password: pwd
+
+  - name: Office2
+    type: ss
+    server: 0.0.0.0
+    port: 445
+    cipher: aes-256-gcm
+    password: pwd
+
+# 锚点 - 节点订阅参数 [每12小时更新一次订阅节点，每 300 秒一次健康检查]
+NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, url: 'http://www.gstatic.com/generate_204', interval: 300}}
+
+# 锚点 - 节点订阅
+proxy-providers:
+  Sub1:
+    <<: *NodeParam
+    url: "https://exmaple.com/proxygroup.list"
+    path: ./proxy_providers/sub1.yaml
+    # override:
+    #   additional-prefix: "[P1]"
+    #   additional-suffix: " | main"
+
+  Sub2:
+    <<: *NodeParam
+    url: "https://exmaple.com/proxygroup.list"
+    path: ./proxy_providers/sub2.yaml
+    # override:
+    #   additional-prefix: "[P2]"
+    #   additional-suffix: " | test"
+
+# 锚点 - 节点筛选组
+FilterHK: &FilterHK '(?i)(?:🇭🇰|香港|\b(?:HK|Hong)\b)'
+FilterJP: &FilterJP '(?i)(?:🇯🇵|日本|川日|东京|大阪|泉日|埼玉|\b(?:JP|Japan)\b)'
+FilterKR: &FilterKR '(?i)(?:🇰🇷|韩国|韓|首尔|\b(?:KR|Korea)\b)'
+FilterSG: &FilterSG '(?i)(?:🇸🇬|新加坡|狮|\b(?:SG|Singapore)\b)'
+FilterUS: &FilterUS '(?i)(?:🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(?:US|United States|LA|Los Angeles|San Jose)\b)'
+FilterUK: &FilterUK '(?i)(?:🇬🇧|英国|伦敦|\b(?:UK|United Kingdom)\b)'
+FilterFR: &FilterFR '(?i)(?:🇫🇷|法国|\b(?:FR|France)\b)'
+FilterDE: &FilterDE '(?i)(?:🇩🇪|德国|法兰克福|\b(?:DE|Germany)\b)'
+FilterGame: &FilterGame '(?i)(?:🎮|游戏|\b(?:GAME|GAMING)\b)'
+FilterAll: &FilterAll '(?i)^(?:(?!群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|\b(?:USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b).)*$'
+
+FilterExcludeHK: &FilterExcludeHK '(?i)^(?:(?!🇭🇰|香港|\b(?:HK|Hong)\b).)*$'
+FilterExcludeHK2: &FilterExcludeHK2 '(?i)^(?:(?!🇭🇰|香港|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|\b(?:HK|Hong|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b).)*$'
+
+# 锚点 - 自动选择策略组(自动选择延迟最低节点) 参数
+Auto: &Auto {type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 300, tolerance: 100}
+# 锚点 - 故障转移策略组(按代理顺序选择第一个可用节点) 参数
+FallBack: &FallBack {type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 300}
+
+# 锚点 - 规则集 参数 [每天更新一次规则集，更新规则时使用的策略：直连(DIRECT)/代理]
+RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: 🌎PROXY}
+
+proxy-groups:
+  - {name: 🌎PROXY, type: select, proxies: [Sub1, Sub2, Auto, Fallback, BW-ALT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
+  - {name: Sub1, type: select, use: [Sub1], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png'}
+  - {name: Sub2, type: select, use: [Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png'}
+  - {name: BW-ALT, type: select, proxies: [🇺🇸 LA-Snell, 🇺🇸 LA-SS], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png'}
+
+  - {name: US, type: select, filter: *FilterUS, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png'}
+  - {name: ExcludeHK, type: select, filter: *FilterExcludeHK2, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Filter.png'}
+  - {name: Auto, <<: *Auto, filter: *FilterAll, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png'}
+  - {name: Fallback, <<: *FallBack, filter: *FilterAll, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png'}
+  - {name: US-FallBack, <<: *FallBack, filter: *FilterUS, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png'}
+  - {name: ExcludeHK-FallBack, <<: *FallBack, filter: *FilterExcludeHK2, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png'}
+
+  - {name: Media, type: select, proxies: [🌎PROXY, BW-ALT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png'}
+  - {name: OpenAI, type: select, proxies: [🌎PROXY, ExcludeHK, ExcludeHK-FallBack, BW-ALT, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
+  - {name: PayPal, type: select, proxies: [🌎PROXY, US, US-FallBack, BW-ALT, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png'}
+  - {name: Hijacking, type: select, proxies: [DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hijacking.png'}
+  - {name: Work, type: select, proxies: [DIRECT, Yitong, Yitong-CMCC], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png'}
+  - {name: Final, type: select, proxies: [🌎PROXY, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png'}
+
+rule-providers:
+  fix:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/fix.yaml
+    path: ./ruleset/fix.yaml
+
+  hijacking:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/hijacking.yaml
+    path: ./ruleset/hijacking.yaml
+
+  media:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/media.yaml
+    path: ./ruleset/media.yaml
+
+  OpenAI:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/OpenAI.yaml
+    path: ./ruleset/OpenAI.yaml
+
+  PayPal:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/PayPal.yaml
+    path: ./ruleset/PayPal.yaml
+
+  proxy:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/proxy.yaml
+    path: ./ruleset/proxy.yaml
+
+  domestic:
+    <<: *RuleSet
+    url: https://cdn.jsdelivr.net/gh/wang95/FxW/Clash/ruleset/domestic.yaml
+    path: ./ruleset/domestic.yaml
+
+rules:
+  - IP-CIDR,192.168.5.253/32,Work
+  - IP-CIDR,10.1.1.0/24,Work
+  - RULE-SET,fix,DIRECT
+  - RULE-SET,hijacking,Hijacking
+  - RULE-SET,media,Media
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,proxy,🌎PROXY
+  - RULE-SET,domestic,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Final
