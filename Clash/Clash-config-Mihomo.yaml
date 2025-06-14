@@ -1,6 +1,6 @@
 # Clash 配置文件 By Wang95
 # 适用于 Mihomo 内核
-# 2025-06-13
+# 2025-06-14
 
 # 参考：
 # https://wiki.metacubex.one/config/
@@ -104,21 +104,21 @@ FallBack: &FallBack {type: fallback, url: 'http://www.gstatic.com/generate_204',
 RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: 🌎PROXY}
 
 proxy-groups:
-  - {name: 🌎PROXY, type: select, proxies: [Sub1, Sub2, Auto, Fallback, BW-ALT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
+  - {name: 🌎PROXY, type: select, proxies: [Sub1, Sub2, Auto, Fallback, Self-Hosted], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png'}
   - {name: Sub1, type: select, use: [Sub1], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png'}
   - {name: Sub2, type: select, use: [Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png'}
-  - {name: BW-ALT, type: select, proxies: [🇺🇸 LA-Snell, 🇺🇸 LA-SS], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png'}
+  - {name: Self-Hosted, type: select, proxies: [🇺🇸 LA-Snell, 🇺🇸 LA-SS], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png'}
 
-  - {name: US, type: select, filter: *FilterUS, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png'}
-  - {name: ExcludeHK, type: select, filter: *FilterExcludeHK2, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Filter.png'}
   - {name: Auto, <<: *Auto, filter: *FilterAll, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png'}
   - {name: Fallback, <<: *FallBack, filter: *FilterAll, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png'}
+  - {name: US, type: select, filter: *FilterUS, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png'}
+  - {name: ExcludeHK, type: select, filter: *FilterExcludeHK2, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Filter.png'}
   - {name: US-FallBack, <<: *FallBack, filter: *FilterUS, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png'}
   - {name: ExcludeHK-FallBack, <<: *FallBack, filter: *FilterExcludeHK2, use: [Sub1, Sub2], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available_1.png'}
 
-  - {name: Media, type: select, proxies: [🌎PROXY, BW-ALT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png'}
-  - {name: OpenAI, type: select, proxies: [🌎PROXY, ExcludeHK, ExcludeHK-FallBack, BW-ALT, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
-  - {name: PayPal, type: select, proxies: [🌎PROXY, US, US-FallBack, BW-ALT, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png'}
+  - {name: Media, type: select, proxies: [🌎PROXY, Self-Hosted], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png'}
+  - {name: OpenAI, type: select, proxies: [🌎PROXY, ExcludeHK, ExcludeHK-FallBack, Self-Hosted, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png'}
+  - {name: PayPal, type: select, proxies: [🌎PROXY, US, US-FallBack, Self-Hosted, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png'}
   - {name: Hijacking, type: select, proxies: [DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hijacking.png'}
   - {name: Work, type: select, proxies: [DIRECT, Yitong, Yitong-CMCC], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png'}
   - {name: Final, type: select, proxies: [🌎PROXY, DIRECT], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png'}
